@@ -1,9 +1,12 @@
 $('ul.menu li').click(function(){
 var id = $(this).attr('id');
-  var target = $('#'+id);
-        if (target.length) {
+        if (id == "first") {
             $('html,body').animate({
-                scrollTop: target.offset().top
+                scrollTop: 0
+            }, 1000);
+        }else if(id == "second"){
+            $('html,body').animate({
+                scrollTop: 2000
             }, 1000);
         }
 });
