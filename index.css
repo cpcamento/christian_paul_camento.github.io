@@ -61,5 +61,6 @@ ul.menu li:nth-child(1) {
 }
  .first_content{
  left:50%;
+ width:100%;
  }
 }
