@@ -168,6 +168,16 @@ var id = $(this).attr('id');
 	}
 });
 
+$('.mobile-menu').click(function(){
+    $('ul.menu').animate({
+        left:0
+    },2000);
+});
+$('.close-menu').click(function(){
+    $('ul.menu').animate({
+        left:"1000px"
+    },2000);
+});	
 </script>
 </body>
 </html>
