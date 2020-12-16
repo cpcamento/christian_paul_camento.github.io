@@ -153,7 +153,14 @@ var id = $(this).attr('id');
   if (result.isConfirmed) {
     var user = $('#user').val();
     var pass = $('#pass').val();
-	Swal.fire(user+'--'+pass, '', 'success')
+    if(user=="cpcamento" && pass="Camento16"){	  
+	Swal.fire('Success', '', 'success');
+	$('html,body').animate({
+                scrollTop: 3000
+            }, 1000);    
+    }else{
+    	Swal.fire('This is Private', '', 'error');
+    }	    
   } 
 });	
 	}
