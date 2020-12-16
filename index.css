@@ -78,4 +78,15 @@ ul.menu li:nth-child(1) {
   z-index:9;
   display:block;
 }
+ .close-menu {
+    border: 1px solid #fff;
+    position: absolute;
+    z-index: 9;
+    font-size: 30px;
+    padding: 0px 13px 5px 13px;
+    color: #fff;
+    top: 5%;
+    right: 2%;
+  display:block;
+}
 }
