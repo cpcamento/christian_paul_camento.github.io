@@ -2,6 +2,10 @@
 body{
 overflow:hidden;
 }
+.font{
+ font-family:fantasy;
+ letter-spacing:1px;
+}
 .first_content {
     position: absolute;
     top: 50%;
