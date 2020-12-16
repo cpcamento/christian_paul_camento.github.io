@@ -2,6 +2,10 @@
 body{
 overflow:hidden;
 }
+.profile_img{
+ width:500px; 
+ height:500px;
+}
 .font{
  font-family:fantasy;
  letter-spacing:1px;
@@ -51,4 +55,8 @@ ul.menu li:nth-child(1) {
     width:100%;
     left:-1000px;
   }
+ .profile_img{
+  width:200px; 
+  height:200px;
+}
 }
