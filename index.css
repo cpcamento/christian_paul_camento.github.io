@@ -1,14 +1,6 @@
-.profile_pic {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-}
-img.my_profile {
-    width: 300px;
-    height: 459px;
-    z-index: 2;
-    top: -32%;
+.first_content {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
