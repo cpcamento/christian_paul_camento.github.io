@@ -1,4 +1,7 @@
 
+body{
+overflow:hidden;
+}
 .first_content {
     position: absolute;
     top: 50%;
