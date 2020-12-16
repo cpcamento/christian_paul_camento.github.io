@@ -59,4 +59,7 @@ ul.menu li:nth-child(1) {
   width:200px; 
   height:200px;
 }
+ .first_content{
+ left:50%;
+ }
 }
