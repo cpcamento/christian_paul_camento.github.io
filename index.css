@@ -18,6 +18,12 @@ overflow:hidden;
     height: 100vh!important;
     overflow: hidden;
 }
+.container-fluid {
+    position: relative;
+    width: 100%!important;
+    height: 100vh!important;
+    overflow: hidden;
+}
 ul.menu li {
     font-size: 20px;
     font-weight: 900;
