@@ -2,6 +2,12 @@
 body{
 overflow:hidden;
 }
+.mobile-menu{
+display:none;
+}
+.mobile-close{
+display:none;
+}
 .profile_img{
  width:500px; 
  height:500px;
@@ -63,4 +69,12 @@ ul.menu li:nth-child(1) {
  left:50%;
  width:100%;
  }
+ .mobile-menu {
+    position: absolute;
+    color: #000!important;
+    font-size: 33px;
+    top: 4%;
+    right: 5%;
+  display:block;
+}
 }
