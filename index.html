@@ -135,6 +135,7 @@ document.getElementById('switchBackBtn').onclick = (event) => {
 document.getElementById('snapBtn').onclick = (event) => {  
   takePicture();
   event.preventDefault();
+   document.getElementById('cam').style.display="none"; 
 }
 
 clearPhoto();
