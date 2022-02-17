@@ -1,164 +1,303 @@
+
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Personal Website">
-  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-  <meta name="author" content="Christian Paul Camento">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Christian Paul G. Camento</title>
-</head>
-<body>
-<style>
-  @font-face{
-    font-family: Petemoss-Regular;
-    src: url(Petemoss-Regular.ttf);
-  }
-  @font-face{
-    font-family: Estonia-Regular;
-    src: url(Estonia-Regular.ttf);
-  }
-  @font-face{
-    font-family: ZillaSlab-Regular;
-    src: url(ZillaSlab-Regular.ttf);
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .menu-column, .two-column {
-    float: left;
-    width: 50%;
-  }
-  body{
-    font-family:ZillaSlab-Regular;
-    font-weight:400;
-    font-size:30px;
-    background: url('/background.jpg');
-    background-size:cover;
-    background-position:center center;
-    color: #424448;
-  }
-    .container{
-        background: #d7d2c27a;
-        padding: 2rem;
-        width: 70%;
-        margin: auto;
-    }
-    ul.main-menu{
-        list-style: none;
-    }
-    ul.main-menu li{
-        padding: 10px;
-        display: inline-block;
-    }
-  .text-right{
-    text-align:right;
-  }
-  .text-center{
-    text-align:center;
-  }
-  .m-0{
-    margin:0;
-  }
-  .menu-column a {
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Christian Paul Camento</title>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.0/es5-shim.min.js"></script>
+    <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+        /* FONTS */
+
+@font-face {
+  font-family: 'GideonRoman';
+  src: url(fonts/GideonRoman-Regular.ttf);
+}
+html
+{
+    height: 1px;
+    min-height: 100%;
+}
+.b-page
+{
+    font-family: 'GideonRoman', Helvetica, Arial, sans-serif;
+    height: 10200px;
+    min-height: 100%;
+    margin: 0;
+    background-color: #5a5859;
+}
+.indicator
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    -webkit-transform: scale3d(0,1,1);
+            transform: scale3d(0,1,1);
+
+    opacity: .25;
+    background: #000;
+
+    will-change: scale;
+}
+.header
+{
+    font-weight: bold;
+    line-height: 1;
+
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
     color: #000;
-    text-decoration: none;
-    padding: 0 10px;
 }
-  hr.m-0 {
-    border-color: #42444817;
+.header_lvl_1
+{
+    font-size: 40px;
 }
-</style>
- <!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
- 
-<div class="row">
-    <div class="menu-column">
-        <a href="">CPGC</a>
-    </div>
-    <div class="menu-column text-right">
-        <a href="">About me</a>
-        <a href="">Experience & Skills</a>
-        <a href="">Contacts</a>
-    </div>
-</div>
-  <br/>
-<div class="container">
-    <div class="row">
-        <div class="two-column">
-            <strong>Name:</strong>Christian Paul Camento<br>
-            <strong>Alias:</strong>P4uL <br>
-            <strong>Phone No:</strong> (SUN)0923458004 <br>
-            <strong>Permanent Address:</strong>Taloot Argao, Cebu <br>
-            <strong>Present Address:</strong>Basak Pardo, Cebu City <br>
-            <strong>Email:</strong>cpcamento@gmail.com <br>
-            <strong>facebook url:</strong> https://www.facebook.com/christianpaul.camento.3<br>
+.header_lvl_2
+{
+    font-size: 26px;
+}
+.code
+{
+    font-family: monospace;
+    line-height: 2em;
+
+    overflow: auto;
+
+    padding: 7px;
+
+    white-space: pre;
+
+    background: #fff;
+}
+.label
+{
+    font-size: .85em;
+}
+.screen
+{
+    width: 100%;
+    min-height: 100%;
+}
+
+.screen_num_1
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    -webkit-transform: translate3d(0, 0, 0) perspective(2000px);
+            transform: translate3d(0, 0, 0) perspective(2000px);
+
+    -webkit-perspective: 2000px;
+            perspective: 2000px;
+    will-change: top;
+}
+
+.screen_num_1 .screen__header
+{
+    font-size: 150px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    margin: 0;
+    text-shadow: 0 10px  #e8fff5;
+
+    -webkit-transform: scale(0) translateZ(0);
+            transform: scale(0) translateZ(0);
+    text-align: center;
+
+    will-change: top, scale;
+}
+
+.screen__slogan
+{
+    font-size: 20px;
+
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    font-weight: 900;
+    text-shadow: 0 1px #e8fff5;
+    display: inline-block;
+
+    width: 100%;
+
+    -webkit-transform: translate3d(0, 125px, 0);
+            transform: translate3d(0, 125px, 0);
+    text-align: center;
+
+    color: #000;
+}
+.screen__step
+{
+    visibility: hidden;
+
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 10px;
+
+    -webkit-transform-origin: 0 0 0;
+            transform-origin: 0 0 0;
+
+    border-radius: 5px;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(0) rotate3d(1, 0, 0, 90deg);
+            transform: translateZ(0) rotate3d(1, 0, 0, 90deg);
+}
+.screen__step .code
+{
+    border-radius: 5px;
+}
+.screen__step_color_white
+{
+
+    box-shadow: -13px 7px 18px 1px #080808;
+    background: #fff;
+}
+.screen__step_color_white .header
+{
+    color: #8c84ed;
+}
+.screen__step_color_white .code
+{
+    background: #ede0d5;
+}
+.screen__step_color_orange
+{
+    background: #000;
+    color:#fff;
+    border-radius: 14px;
+    box-shadow: 10px 12px 10px 0 #fff
+}
+
+.screen__step_color_orange .header
+{
+    color: #fff;
+}
+.screen__step_color_orange .label
+{
+    color: #fff;
+}
+.screen__step_download
+{
+    margin-top: 170px;
+}
+
+.mid_height{
+    position: relative;
+    height: 30vh;
+}
+
+    </style>
+</head>
+<body class="b-page">
+<section id="screen1" class="screen screen_num_1">
+    <h1 id="s1header" class="screen__header header header_lvl_1">Christian Paul G Camento</h1>
+    <span id="s1slogan" class="screen__slogan slogan text_underline">WEB DEVELOPER</span>
+
+    <article class="screen__step screen__step_color_orange screen__step_download mid_height">
+        <p><strong>BIRTHDATE</strong>: MARCH 16, 1998</p>   
+        <p><strong>EMAIL</strong>: cpcamento@gmail.com</p>
+        <p><strong>MOBILE NO</strong>: 09239458004</p>
+        <p><strong>PRESENT ADDRESS</strong>: Basak Pardo Cebu City</p>
+        <p><strong>PERMANENT ADDRESS</strong>: Taloot Argao Cebu</p>
+    </article>
+
+    <article class="screen__step screen__step_color_white screen__step_connect mid_height">
+        <div class="side-title">
+            <h1>SKILLS</h1>
         </div>
-        <div class="two-column text-center">
-            <img src="/mypic.jpg" style="width:300px;">        
-        </div>
-    </div>
-</div>      
-<br/>
-<div class="container">
-    <h3 class="m-0">EDUCATION</h3>
-    <hr/ class="m-0">
-    <p><strong>Elementary:</strong> Taloot Central Elementary School - 2011</p>
-    <p><strong>High School:</strong> Don Vicente Rama Memorial National High School -2015</p>
-    <p><strong>College:</strong> University of Cebu (Main Campus) - 2019</p>
-</div>      
-<br/>  
-<div class="container">
-    <h3 class="m-0">WORK EXPERIENCE</h3>
-    <hr/ class="m-0">
-    <h5 class="m-0"><strong>VESTAHOMES COMMERCIAL INC.</strong></h5>
-    <p class="m-0">Web Developer | 06-27-2019- present</p>
-    <ul class="m-0">
-      <li>Design and Establish website and system using laravel or wordpress</li>
-      <li>Create own Plugins and themes for wordpress websites</li>
-      <li>Diagnose and Troubleshoot different websites of the company by deploying updated knowledge and technologies</li>
-    </ul>
-    
-    <h3 class="m-0">SKILLS</h3>
-    <hr/ class="m-0">
-    <div class="row">
-        <div class="two-column">
-          <li>LARAVEL</li>
-          <li>WORDPRESS</li>
-          <li>BOOTSTRAP</li>
-        </div>
-        <div class="two-column">
-          <li>JAVASCRIPT</li>
-          <li>JQUERY / AJAX</li>
-          <li>PHOTOSHOP</li>
-        </div>
-    </div>
-</div>   
-<br/>
-  <!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-  
+            <ul class="skills">
+                <li>PHP
+                    <ul>
+                        <li>Laravel 80%
+                            <ul>
+                                <li>Livewire 40%</li>
+                            </ul>
+                        </li>
+                        <li>Codeigniter 50%</li>
+                    </ul>
+                </li>
+                <li>
+                    JAVASCRIPT 
+                    <ul>
+                        <li>Jquery 80%</li>
+                        <li>Vue 30%</li>
+                        <li>Angular 30%</li>
+                    </ul>
+                </li>
+                <li>HTML</li>
+                <li>CSS
+                    <ul>
+                        <li>SASS 50%</li>
+                    </ul>
+                </li>
+            </ul>
+    </article>
+
+    <article class="screen__step screen__step_color_orange screen__step_use mid_height">
+       <h1>WORK EXPERIENCE </h1>
+        <h4>VESTAHOMES COMMERCIAL INC.</h4>
+        <H5>Web Developer | 06-27-2019 | Present</H5>
+        <ul>
+            <li>Design and Establish website and system using laravel or wordpress</li>
+            <li>Create own Plugins and themes for wordpress websites</li>
+            <li>Diagnose and Troubleshoot different websites of the company by deploying updated knowledge and technologies</li>
+        </ul>
+    </article>
+</section>
+<div class="indicator" id="indicator"></div>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="//rawgit.com/Promo/scrollissimo/master/dist/scrollissimo.min.js"></script>
 <script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "107199731784198");
-  chatbox.setAttribute("attribution", "biz_inbox");
+    window.addEventListener('load', function(){
+        var screen1 = document.getElementById('screen1'),
+            indicator = document.getElementById('indicator'),
+            header = document.getElementById('s1header'),
+            slogan = document.getElementById('s1slogan'),
+            steps = document.querySelectorAll('.screen__step'),
+            step1 = document.querySelector('.screen__step_download'),
+            step2 = document.querySelector('.screen__step_connect'),
+            step3 = document.querySelector('.screen__step_use'),
+            firstTimeline = new TimelineMax({ paused: true });
 
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v12.0'
+        TweenLite.defaultEase = Linear.easeNone;
+
+        firstTimeline.to(header, 1000, { scale: 1, top: '35%' });
+        firstTimeline.to(header, 1000, { scale: .5, top: '20%' });
+        firstTimeline.to(slogan, 1000, { left: 0 });
+        firstTimeline.to(header, 1000, { top: '-2%' });
+        firstTimeline.to(slogan, 1000, { top: '-2%' }, '-=1000');
+        firstTimeline.to(step1, 1000, { rotationX: 0, visibility: 'visible' });
+        firstTimeline.to(step2, 1000, { rotationX: 0, visibility: 'visible' });
+        firstTimeline.to(step3, 1000, { rotationX: 0, visibility: 'visible' });
+        firstTimeline.to(screen1, 1000, { top: '-30%' }, '+=1500');
+
+        scrollissimo.add(firstTimeline, 0, 60);
+
+        scrollissimo.add(new TweenMax(indicator, 9500, { scale: 1, ease: Linear.easeNone, paused: true }), 0);
+
+        window.addEventListener('scroll', function(){
+            scrollissimo.knock();
+        });
     });
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>
