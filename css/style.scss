@@ -1,5 +1,31 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(/fonts/Open_Sans/static/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(/fonts/Rubik/static/Rubik-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Victor Mono';
+  src: url(/fonts/Victor_Mono/static/VictorMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Ysabeau Infant';
+  src: url(/fonts/Ysabeau_Infant/static/YsabeauInfant-Regular.ttf);
+}
+
 body{
   background-color: #dedede;
+  font-family: 'Ysabeau Infant';
 }
 
 .container{
