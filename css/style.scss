@@ -33,6 +33,10 @@ body{
 header{
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(154, 161, 177, 0.1);
+  .navigation{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 .container{
