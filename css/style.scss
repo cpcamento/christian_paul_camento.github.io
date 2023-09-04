@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(../fonts/Rubik/static/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url(../fonts/Rubik/static/Rubik-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Ysabeau';
+    src: url(../fonts/Ysabeau_Infant/static/YsabeauInfant-ExtraBold.ttf);
+}
+
+body{
+    background-color: #000;
+    font-family: 'Rubik';
+    color: #fff;
+    margin:0;
+}
+
+.container{
+    width: 80%;
+    margin:0 auto;
+}   
+
+.navigation{
+    display: grid;
+    grid-template-columns:1fr 3fr;
+    padding: 0.5rem 0;
+    div{
+        &:first-child{
+            h3{
+                font-family: 'Ysabeau';
+                font-size: 30px;
+                margin:0;
+            }
+        }
+        &:last-child{
+            margin:auto 0 auto auto;
+            a{
+                display: inline-block;
+                color: #fff;
+                padding:0 0.5rem;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+section{
+    &.banner{
+        position:relative;
+        overflow: hidden;
+        img{
+            &.bg{
+                animation: fade-in-down 1s ease;
+                margin-top: -10%;
+                position: relative;
+                rotate: 180deg;
+                width: 100%;
+                z-index: 5;
+            }
+            &.profile{
+                width: 300px;
+                animation: profile-fade-in-down 4s ease;
+                border-radius: 50%;
+                height: 300px;
+                object-fit: cover;
+                object-position: top;
+                position:relative;
+                margin-top: -2rem;
+                z-index:99;
+            }
+        }
+        .text-content{
+            h1{
+                animation: fade-in-down 2s ease;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 0.3vw;
+                -webkit-text-stroke-color: #fff;
+                font-size: 10.8vw;
+                font-style: italic;
+                line-height: 0;
+                font-family: 'Rubik Bold';
+            }
+        }
+        .bottom{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap:2rem;
+            div{
+                &:first-child{
+                 text-align: center;   
+                }
+                &:last-child{
+                    padding:1rem;
+                    > *{
+                        animation: to-left 2s ease;
+                    }
+                    h1{
+                        font-family: 'Rubik Bold';
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade-in-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes profile-fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes to-left {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
