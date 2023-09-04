@@ -31,8 +31,15 @@ body{
 }
 
 header{
-  background-color: #fff;
+  background-image: linear-gradient(45deg, #955592 30%, #181818 30%);
   box-shadow: 0 5px 10px rgba(154, 161, 177, 0.1);
+  &::after{
+    content: '';
+    width: 30%;
+    border-bottom: 3px solid #fbcc56;
+    position: absolute;
+    left: 0;
+  }
   .navigation{
     display: grid;
     grid-template-columns: 1fr 3fr;
