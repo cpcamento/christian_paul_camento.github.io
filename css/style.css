@@ -51,6 +51,17 @@ header .navigation {
       grid-template-columns: 1fr 3fr;
 }
 
+header .navigation div:last-child {
+  vertical-align: middle;
+  margin: auto 0 auto auto;
+}
+
+header .navigation div:last-child a {
+  display: inline-block;
+  color: #fbc950;
+  text-decoration: none;
+}
+
 .container {
   width: 1240px;
   margin: 0 auto;

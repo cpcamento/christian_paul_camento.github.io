@@ -43,6 +43,17 @@ header{
   .navigation{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    div{
+      &:last-child{
+        vertical-align: middle;
+        margin: auto 0 auto auto;
+        a{
+          display: inline-block;
+          color: #fbc950;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
