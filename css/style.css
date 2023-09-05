@@ -149,6 +149,7 @@ section.banner .bottom div:last-child h1 {
   font-family: 'Rubik Bold';
   font-size: 4.2vw;
   margin-bottom: 0;
+  text-shadow: -4px 0px black;
 }
 
 section.banner .bottom div:last-child p {
