@@ -32,8 +32,9 @@ body{
     div{
         &:first-child{
             h3{
-                font-family: 'Ysabeau';
-                font-size: 30px;
+                font-family: 'Rubik Bold';
+                opacity: 0.8;
+                font-size: 1vw;
                 margin:0;
             }
         }
@@ -44,6 +45,9 @@ body{
                 color: #fff;
                 padding:0 0.5rem;
                 text-decoration: none;
+                font-family: 'Rubik Bold';
+                opacity: 0.8;
+                font-size: 1vw;
             }
         }
     }
@@ -92,7 +96,7 @@ section{
             margin-top: -9vw;
             z-index: 999;
             position: relative;
-            
+
             div{
                 &:first-child{
                  text-align: center;   
