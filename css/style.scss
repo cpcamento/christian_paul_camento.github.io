@@ -63,14 +63,13 @@ section{
                 z-index: 5;
             }
             &.profile{
-                width: 300px;
+                width: 20vw;
                 animation: profile-fade-in-down 4s ease;
                 border-radius: 50%;
-                height: 300px;
+                height: 20vw;
                 object-fit: cover;
                 object-position: top;
                 position:relative;
-                margin-top: -2rem;
                 z-index:99;
             }
         }
@@ -90,9 +89,16 @@ section{
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap:2rem;
+            margin-top: -9vw;
+            z-index: 999;
+            position: relative;
+            
             div{
                 &:first-child{
                  text-align: center;   
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
                 }
                 &:last-child{
                     padding:1rem;
@@ -101,6 +107,11 @@ section{
                     }
                     h1{
                         font-family: 'Rubik Bold';
+                        font-size: 4.2vw;
+                        margin-bottom:0;
+                    }
+                    p{
+                        font-size:1.7vw;
                     }
                 }
             }
