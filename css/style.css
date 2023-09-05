@@ -1,18 +1,21 @@
 @font-face {
-  font-family: "Rubik";
+  font-family: 'Rubik';
   src: url(../fonts/Rubik/static/Rubik-Regular.ttf);
 }
+
 @font-face {
-  font-family: "Rubik Bold";
+  font-family: 'Rubik Bold';
   src: url(../fonts/Rubik/static/Rubik-ExtraBold.ttf);
 }
+
 @font-face {
-  font-family: "Ysabeau";
+  font-family: 'Ysabeau';
   src: url(../fonts/Ysabeau_Infant/static/YsabeauInfant-ExtraBold.ttf);
 }
+
 body {
   background-color: #000;
-  font-family: "Rubik";
+  font-family: 'Rubik';
   color: #fff;
   margin: 0;
 }
@@ -23,105 +26,210 @@ body {
 }
 
 .navigation {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
   padding: 0.5rem 0;
 }
+
 .navigation div:first-child h3 {
-  font-family: "Ysabeau";
-  font-size: 30px;
+  font-family: 'Rubik Bold';
+  opacity: 0.8;
+  font-size: 1vw;
   margin: 0;
 }
+
 .navigation div:last-child {
   margin: auto 0 auto auto;
 }
+
 .navigation div:last-child a {
   display: inline-block;
   color: #fff;
   padding: 0 0.5rem;
   text-decoration: none;
+  font-family: 'Rubik Bold';
+  opacity: 0.8;
+  font-size: 1vw;
 }
 
 section.banner {
   position: relative;
   overflow: hidden;
 }
+
 section.banner img.bg {
-  animation: fade-in-down 1s ease;
+  -webkit-animation: fade-in-down 1s ease;
+          animation: fade-in-down 1s ease;
   margin-top: -10%;
   position: relative;
   rotate: 180deg;
   width: 100%;
   z-index: 5;
 }
+
 section.banner img.profile {
-  width: 300px;
-  animation: profile-fade-in-down 4s ease;
+  width: 20vw;
+  -webkit-animation: profile-fade-in-down 4s ease;
+          animation: profile-fade-in-down 4s ease;
   border-radius: 50%;
-  height: 300px;
+  height: 20vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
   position: relative;
-  margin-top: -2rem;
   z-index: 99;
 }
+
+section.banner .text-content {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 section.banner .text-content h1 {
-  animation: fade-in-down 2s ease;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.3vw;
   -webkit-text-stroke-color: #fff;
   font-size: 10.8vw;
   font-style: italic;
   line-height: 0;
-  font-family: "Rubik Bold";
+  font-family: 'Rubik Bold';
 }
+
+section.banner .text-content h1:first-child {
+  margin-top: 2vw;
+  -webkit-animation: fade-in-down 3s ease;
+          animation: fade-in-down 3s ease;
+}
+
+section.banner .text-content h1:last-child {
+  white-space: nowrap;
+  margin-left: 3vw;
+  -webkit-animation: fade-in-down 2s ease;
+          animation: fade-in-down 2s ease;
+}
+
 section.banner .bottom {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
   gap: 2rem;
+  margin-top: -9vw;
+  z-index: 999;
+  position: relative;
 }
+
 section.banner .bottom div:first-child {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 section.banner .bottom div:last-child {
   padding: 1rem;
 }
+
 section.banner .bottom div:last-child > * {
-  animation: to-left 2s ease;
+  -webkit-animation: to-left 2s ease;
+          animation: to-left 2s ease;
 }
+
 section.banner .bottom div:last-child h1 {
-  font-family: "Rubik Bold";
+  font-family: 'Rubik Bold';
+  font-size: 4.2vw;
+  margin-bottom: 0;
+}
+
+section.banner .bottom div:last-child p {
+  font-size: 1.7vw;
+}
+
+@-webkit-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @keyframes fade-in-down {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
+
+@-webkit-keyframes profile-fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @keyframes profile-fade-in-down {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
+
+@-webkit-keyframes to-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 @keyframes to-left {
   0% {
     opacity: 0;
-    transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
