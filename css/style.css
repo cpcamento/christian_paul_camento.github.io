@@ -71,8 +71,8 @@ section.banner img.bg {
 
 section.banner img.profile {
   width: 30vw;
-  -webkit-animation: profile-fade-in-down 3s ease;
-          animation: profile-fade-in-down 3s ease;
+  -webkit-animation: profile-fade-in-down 0.4s ease;
+          animation: profile-fade-in-down 0.4s ease;
   border-radius: 50%;
   height: 30vw;
   -o-object-fit: cover;
