@@ -13,11 +13,26 @@
     src: url(../fonts/Ysabeau_Infant/static/YsabeauInfant-ExtraBold.ttf);
 }
 
+$color:#3f51b5;
+
 body{
     background-color: #000;
     font-family: 'Rubik';
     color: #fff;
     margin:0;
+    background-image:url(../images/pattern1.png);
+    &::after{
+        content:'';
+        width: 100%;
+        height:100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0);
+        top:0;
+        left:0;
+        z-index: 999999999;
+        animation:body-animate 20s ease;
+        animation-delay: 1.8s;
+    }
 }
 
 .container{
@@ -60,18 +75,18 @@ section{
         img{
             &.bg{
                 animation: fade-in-down 1s ease;
-                margin-top: -12%;
+                margin-top: -10%;
                 position: relative;
                 rotate: 180deg;
                 width: 100%;
                 z-index: 5;
             }
             &.profile{
-                width: 30vw;
+                width: 100%;
                 animation: profile-fade-in-down 0.4s ease;
                 border-radius: 50%;
-                height: 30vw;
-                object-fit: cover;
+                object-fit: contain;
+                height: 250px;
                 object-position: top;
                 position:relative;
                 z-index:99;
@@ -82,12 +97,12 @@ section{
             width: 100%;
             position: relative;
             overflow: hidden;
-            background-image: linear-gradient(180deg, #b2b2b4, transparent), url(../images/pattern1.png);
+            background: linear-gradient(180deg, $color, transparent), url(../images/pattern1.png), #0000 url(../images/profile-bw.webp) repeat 50% 64%;
             h1{
                 -webkit-text-fill-color: transparent;
                 -webkit-text-stroke-width: 0.3vw;
                 -webkit-text-stroke-color: #fff;
-                font-size: 8.8vw;
+                font-size: 6.8vw;
                 font-style: italic;
                 line-height: 0;
                 font-family: 'Rubik Bold';
@@ -95,75 +110,69 @@ section{
 
                 &:first-child{
                     margin-top: 2vw;
-                    animation: fade-in-down 4s ease;
+                    animation: fade-in-down 2.5s ease;
                 }
                 &:nth-child(2) {
-                    animation: fade-in-down 3s ease;
+                    animation: fade-in-down 1.5s ease;
                     margin-left:5vw;
                 }
                 &:last-child{
                     white-space: nowrap;
-                    animation: fade-in-down 2s ease;
+                    animation: fade-in-down 0.5s ease;
                 }
             }
         }
         .bottom{
-            margin-top: -17vw;
-            z-index: 999;
+            z-index: 9999999999;
             position: relative;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             div{
                 padding:1rem;
+                position: relative;
                 
-                >* {
-                    animation: profile-fade-in-down 3s ease;
+                &#first {
+                    animation: bottom-animate-first 2s forwards;
+                    animation-delay:1.8s;
+                    opacity: 0;
+                    h4{
+                        font-size: 2vw;
+                        font-family: 'Rubik Bold';
+                        color:$color;
+                        margin:0;
+                    }
+                }
+                &#second{
+                    animation: bottom-animate-second 5s forwards;
+                    animation-delay: 6s;
+                    opacity: 0;
+                    ul{
+                        list-style: none;
+                        position: relative;
+                        overflow: hidden;
+                        li{
+                            font-size: 3vw;
+                            font-family: 'Rubik Bold';
+                            text-align: right;
+                            position: relative;
+                            overflow: hidden;
+                            transform:rotate3d(1, 3, 1, 0deg);
+                            animation: li-animate 5s ease;
+                            animation-delay:12s;
+                        }
+                    }
                 }
                 
                 h1 {
                     font-family: 'Rubik Bold';
-                    font-size: 4.2vw;
-                    margin-bottom: 0;
+                    font-size: 3vw;
+                    margin: 0;
                     text-shadow: -4px 0px black;
                 }
                 
                 p {
-                    font-size: 1.7vw;
+                    font-size: 1.2vw;
                 }
-            }
-        }
-    }
-    &.skills{
-        display: block;
-        text-align: center;
-        > div{
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            border-top-left-radius: 2vw;
-            border-bottom-right-radius: 2vw;
-            text-align: center;
-            padding:0 2rem;
-            display: inline-block;
-            margin:1rem;
-            &:nth-child(1){
-                animation: to-left 2s ease;
-            }
-            &:nth-child(2) {
-                animation: to-right 2s ease;
-            }
-            &:nth-child(3) {
-                animation: to-left 2s ease;
-            }
-            &:nth-child(4) {
-                animation: to-right 2s ease;
-            }
-            &:nth-child(5) {
-                animation: to-left 2s ease;
-            }
-            &:nth-child(6) {
-                animation: to-right 2s ease;
-            }
-            p{
-                font-size:1.7vw;
             }
         }
     }
@@ -213,5 +222,71 @@ section{
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+
+@keyframes bottom-animate-first {
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    90% {
+        transform: translateX(0%) scale(1);
+    }
+    95% {
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+}
+
+@keyframes li-animate {
+    0%{
+        transform:rotate3d(1, 3, 1, 95deg);
+    }
+    100%{
+        transform:rotate3d(1, 3, 1, 0deg);
+    }
+}
+
+@keyframes bottom-animate-second {
+    0% {
+        opacity: 0;
+        transform: translateX(50%) scale(0.1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    90% {
+        transform: scale(1);
+    }
+
+    95% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+}
+
+@keyframes body-animate {
+    0%{
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    3%{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    50%{
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0);
     }
 }
