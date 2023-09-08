@@ -149,7 +149,7 @@ section{
                     ul{
                         list-style: none;
                         position: relative;
-                        overflow: hidden;
+                        padding-left:1rem;
                         li{
                             font-size: 3vw;
                             font-family: 'Rubik Bold';
@@ -288,5 +288,34 @@ section{
     }
     100%{
         background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+
+
+@media screen and (max-width:900px){
+    section.banner {
+        .bottom{
+            grid-template-columns: 1fr;
+            div{
+                &#first{
+                    h4, p{
+                        font-size: 4vw;
+                    }
+                }
+                &#second{
+                    ul{
+                        padding-left:1rem;
+                        li{
+                            font-size:6vw;
+                            text-align: left;
+                        }
+                    }
+                }
+                h1{
+                    font-size: 6vw;
+                }
+            }
+        }
     }
 }

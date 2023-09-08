@@ -178,7 +178,7 @@ section.banner .bottom div#second {
 section.banner .bottom div#second ul {
   list-style: none;
   position: relative;
-  overflow: hidden;
+  padding-left: 1rem;
 }
 
 section.banner .bottom div#second ul li {
@@ -451,6 +451,26 @@ section.banner .bottom div p {
   }
   100% {
     background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section.banner .bottom {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  section.banner .bottom div#first h4, section.banner .bottom div#first p {
+    font-size: 4vw;
+  }
+  section.banner .bottom div#second ul {
+    padding-left: 1rem;
+  }
+  section.banner .bottom div#second ul li {
+    font-size: 6vw;
+    text-align: left;
+  }
+  section.banner .bottom div h1 {
+    font-size: 6vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
