@@ -193,6 +193,10 @@ section.banner .bottom div#second ul li {
           animation: li-animate 5s ease;
   -webkit-animation-delay: 12s;
           animation-delay: 12s;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fefefe), to(#3e50b4));
+  background-image: linear-gradient(360deg, #fefefe, #3e50b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.banner .bottom div h1 {
@@ -455,6 +459,9 @@ section.banner .bottom div p {
 }
 
 @media screen and (max-width: 900px) {
+  section.banner .text-content h1 {
+    font-size: 13vw;
+  }
   section.banner .bottom {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
