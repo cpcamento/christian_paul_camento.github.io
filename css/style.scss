@@ -1,329 +1,371 @@
 @font-face {
-    font-family: 'Rubik';
-    src: url(../fonts/Rubik/static/Rubik-Regular.ttf);
+  font-family: "Rubik";
+  src: url(../fonts/Rubik/static/Rubik-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Rubik Bold';
-    src: url(../fonts/Rubik/static/Rubik-ExtraBold.ttf);
+  font-family: "Rubik Bold";
+  src: url(../fonts/Rubik/static/Rubik-ExtraBold.ttf);
 }
 
 @font-face {
-    font-family: 'Ysabeau';
-    src: url(../fonts/Ysabeau_Infant/static/YsabeauInfant-ExtraBold.ttf);
+  font-family: "Charm";
+  src: url(../fonts/Charm/Charm-Regular.ttf);
 }
 
-$color:#3f51b5;
+@font-face {
+  font-family: "Charm Bold";
+  src: url(../fonts/Charm/Charm-Bold.ttf);
+}
 
-body{
-    background-color: #000;
-    font-family: 'Rubik';
-    color: #fff;
-    margin:0;
-    background-image:url(../images/pattern1.png);
-    &::after{
-        content:'';
+@font-face {
+  font-family: "Nosifer";
+  src: url(../fonts/Nosifer/Nosifer-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Sigmar One";
+  src: url(../fonts/Sigmar_One/SigmarOne-Regular.ttf);
+}
+
+$color: #3f51b5;
+
+body {
+  background-color: #000;
+  font-family: "Charm";
+  color: #eee;
+  margin: 0;
+  background-image: url(../images/pattern1.png);
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+    animation: body-animate 2s ease;
+    animation-delay: 1.8s;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 0.5rem 0;
+  div {
+    &:first-child {
+      h3 {
+        font-family: "Rubik Bold";
+        opacity: 0.8;
+        font-size: 1vw;
+        margin: 0;
+      }
+    }
+    &:last-child {
+      margin: auto 0 auto auto;
+      a {
+        display: inline-block;
+        color: #fff;
+        padding: 0 0.5rem;
+        text-decoration: none;
+        font-family: "Rubik Bold";
+        opacity: 0.8;
+        font-size: 1vw;
+      }
+    }
+  }
+}
+
+section {
+  &.banner {
+    position: relative;
+    overflow: hidden;
+    img {
+      &.bg {
+        animation: fade-in-down 1s ease;
+        margin-top: -10%;
+        position: relative;
+        rotate: 180deg;
         width: 100%;
-        height:100%;
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0);
-        top:0;
-        left:0;
-        z-index: 999999999;
-        animation:body-animate 20s ease;
-        animation-delay: 1.8s;
+        z-index: 5;
+      }
+      &.bg-white {
+        animation: fade-in-down 1s ease;
+        animation-delay: 2s;
+        position: relative;
+        rotate: 0deg;
+        width: 100%;
+        z-index: 5;
+      }
+      &.profile {
+        width: 100%;
+        animation: profile-fade-in-down 0.4s ease;
+        border-radius: 50%;
+        object-fit: contain;
+        height: 250px;
+        object-position: top;
+        position: relative;
+        z-index: 99;
+        box-shadow: 0 4px 10px 6px #000;
+      }
     }
+    .text-content {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #b72797, transparent),
+        url(../images/pattern1.png),
+        #0000 url(../images/profile-bw.webp) repeat 50% 64%;
+      h1 {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 0.3vw;
+        -webkit-text-stroke-color: #fff;
+        font-size: 6.8vw;
+        font-style: italic;
+        line-height: 0;
+        font-family: "Nosifer";
+        white-space: nowrap;
+
+        &:first-child {
+          margin-top: 2vw;
+          animation: fade-in-down 2.5s ease;
+        }
+        &:nth-child(2) {
+          animation: fade-in-down 1.5s ease;
+          margin-left: 5vw;
+        }
+        &:last-child {
+          white-space: nowrap;
+          animation: fade-in-down 0.5s ease;
+        }
+      }
+    }
+    .bottom {
+      z-index: 9999999999;
+      position: relative;
+      div {
+        padding: 1rem;
+        position: relative;
+
+        &#first {
+          animation: bottom-animate-first 2s forwards;
+          animation-delay: 1.8s;
+          opacity: 0;
+          padding-top: 0;
+          text-align: center;
+          h4 {
+            font-size: 50px;
+            font-family: "Nosifer";
+            color: #b72797;
+            margin: 0;
+            text-shadow: 0 1px 0 WHITE;
+          }
+        }
+
+        h1 {
+          font-family: "Nosifer";
+          font-size: 80px;
+          margin: 0;
+          color: #b72797;
+          text-shadow: 0px 1px 0px #fff;
+        }
+
+        p {
+          font-size: 30px;
+          width: 900px;
+          margin: auto;
+          text-align: justify;
+          font-family: "Nosifer";
+          color: #b72797;
+          text-shadow: 0 1px 0px #fff;
+        }
+        a {
+          display: block;
+          position: relative;
+          font-size: 20px;
+          font-family: "Rubik Bold ";
+          color: #fff;
+          padding: 1rem 3rem;
+          border: 1px solid #fff;
+          width: max-content;
+          text-decoration: none;
+          margin: auto;
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
 }
 
-.container{
-    width: 80%;
-    margin:0 auto;
-}   
-
-.navigation{
-    display: grid;
-    grid-template-columns:1fr 3fr;
-    padding: 0.5rem 0;
-    div{
-        &:first-child{
-            h3{
-                font-family: 'Rubik Bold';
-                opacity: 0.8;
-                font-size: 1vw;
-                margin:0;
-            }
-        }
-        &:last-child{
-            margin:auto 0 auto auto;
-            a{
-                display: inline-block;
-                color: #fff;
-                padding:0 0.5rem;
-                text-decoration: none;
-                font-family: 'Rubik Bold';
-                opacity: 0.8;
-                font-size: 1vw;
-            }
-        }
-    }
-}
-
-section{
-    &.banner{
-        position:relative;
-        overflow: hidden;
-        img{
-            &.bg{
-                animation: fade-in-down 1s ease;
-                margin-top: -10%;
-                position: relative;
-                rotate: 180deg;
-                width: 100%;
-                z-index: 5;
-            }
-            &.profile{
-                width: 100%;
-                animation: profile-fade-in-down 0.4s ease;
-                border-radius: 50%;
-                object-fit: contain;
-                height: 250px;
-                object-position: top;
-                position:relative;
-                z-index:99;
-                box-shadow: 0 4px 10px 6px #000;
-            }
-        }
-        .text-content{
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(180deg, $color, transparent), url(../images/pattern1.png), #0000 url(../images/profile-bw.webp) repeat 50% 64%;
-            h1{
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke-width: 0.3vw;
-                -webkit-text-stroke-color: #fff;
-                font-size: 6.8vw;
-                font-style: italic;
-                line-height: 0;
-                font-family: 'Rubik Bold';
-                white-space: nowrap;
-
-                &:first-child{
-                    margin-top: 2vw;
-                    animation: fade-in-down 2.5s ease;
-                }
-                &:nth-child(2) {
-                    animation: fade-in-down 1.5s ease;
-                    margin-left:5vw;
-                }
-                &:last-child{
-                    white-space: nowrap;
-                    animation: fade-in-down 0.5s ease;
-                }
-            }
-        }
-        .bottom{
-            z-index: 9999999999;
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            div{
-                padding:1rem;
-                position: relative;
-                
-                &#first {
-                    animation: bottom-animate-first 2s forwards;
-                    animation-delay:1.8s;
-                    opacity: 0;
-                    h4{
-                        font-size: 2vw;
-                        font-family: 'Rubik Bold';
-                        color:$color;
-                        margin:0;
-                    }
-                }
-                &#second{
-                    animation: bottom-animate-second 5s forwards;
-                    animation-delay: 6s;
-                    opacity: 0;
-                    ul{
-                        list-style: none;
-                        position: relative;
-                        padding-left:1rem;
-                        li{
-                            font-size: 3vw;
-                            font-family: 'Rubik Bold';
-                            text-align: right;
-                            position: relative;
-                            overflow: hidden;
-                            transform:rotate3d(1, 3, 1, 0deg);
-                            animation: li-animate 5s ease;
-                            animation-delay:10s;
-                            background-image: linear-gradient(360deg, #fefefe, #3e50b4);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-                    }
-                }
-                
-                h1 {
-                    font-family: 'Rubik Bold';
-                    font-size: 3vw;
-                    margin: 0;
-                    text-shadow: -4px 0px black;
-                }
-                
-                p {
-                    font-size: 1.2vw;
-                }
-            }
-        }
-    }
+.second-wrapper {
+  background: linear-gradient(180deg, #3f51b5, transparent),
+    url(../images/pattern1.png),
+    rgba(0, 0, 0, 0) url(../images/profile-bw.webp) repeat 50% 50%;
 }
 
 @keyframes fade-in-down {
-    0%{
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes profile-fade-in-down {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes to-left {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes to-right {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-
 @keyframes bottom-animate-first {
-    0%{
-        opacity: 0;
-        transform: translateX(-50%);
-    }
-    90% {
-        transform: translateX(0%) scale(1);
-    }
-    95% {
-        transform: scale(0.8);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0%) scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  90% {
+    transform: translateY(0%) scale(1);
+  }
+  95% {
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
 }
 
 @keyframes li-animate {
-    0%{
-        transform:rotate3d(1, 3, 1, 95deg);
-    }
-    100%{
-        transform:rotate3d(1, 3, 1, 0deg);
-    }
+  0% {
+    transform: rotate3d(1, 3, 1, 95deg);
+  }
+  100% {
+    transform: rotate3d(1, 3, 1, 0deg);
+  }
 }
 
 @keyframes bottom-animate-second {
-    0% {
-        opacity: 0;
-        transform: translateX(50%) scale(0.1);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale(0.1);
+  }
 
-    50% {
-        transform: scale(0.5);
-    }
+  50% {
+    transform: scale(0.5);
+  }
 
-    90% {
-        transform: scale(1);
-    }
+  90% {
+    transform: scale(1);
+  }
 
-    95% {
-        transform: scale(0.8);
-    }
+  95% {
+    transform: scale(0.8);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0%) scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
 }
 
 @keyframes body-animate {
-    0%{
-        background-color: rgba(0, 0, 0, 0.0);
-    }
-    3%{
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    50%{
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    100%{
-        background-color: rgba(0, 0, 0, 0);
-    }
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  3% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
-
-
-@media screen and (max-width:900px){
-    section.banner {
-        .text-content {
-            h1{
-                font-size: 13vw;
-            }
+@media screen and (max-width: 1120px) {
+  section.banner {
+    .bottom {
+      div {
+        &#first {
+          h4 {
+            font-size: 35px;
+          }
         }
-        .bottom{
-            grid-template-columns: 1fr;
-            div{
-                &#first{
-                    h4, p{
-                        font-size: 4vw;
-                    }
-                }
-                &#second{
-                    ul{
-                        padding-left:1rem;
-                        li{
-                            font-size:6vw;
-                            text-align: left;
-                        }
-                    }
-                }
-                h1{
-                    font-size: 6vw;
-                }
-            }
+        h1 {
+          font-size: 50px;
         }
+        p {
+          width: 90%;
+        }
+      }
     }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section.banner {
+    .text-content {
+      h1 {
+        font-size: 13vw;
+      }
+    }
+    .bottom {
+      grid-template-columns: 1fr;
+      div {
+        &#first {
+          h4,
+          p {
+          }
+        }
+        h1 {
+        }
+        p {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
 }

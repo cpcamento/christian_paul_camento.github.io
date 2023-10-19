@@ -1,28 +1,36 @@
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   src: url(../fonts/Rubik/static/Rubik-Regular.ttf);
 }
-
 @font-face {
-  font-family: 'Rubik Bold';
+  font-family: "Rubik Bold";
   src: url(../fonts/Rubik/static/Rubik-ExtraBold.ttf);
 }
-
 @font-face {
-  font-family: 'Ysabeau';
-  src: url(../fonts/Ysabeau_Infant/static/YsabeauInfant-ExtraBold.ttf);
+  font-family: "Charm";
+  src: url(../fonts/Charm/Charm-Regular.ttf);
 }
-
+@font-face {
+  font-family: "Charm Bold";
+  src: url(../fonts/Charm/Charm-Bold.ttf);
+}
+@font-face {
+  font-family: "Nosifer";
+  src: url(../fonts/Nosifer/Nosifer-Regular.ttf);
+}
+@font-face {
+  font-family: "Sigmar One";
+  src: url(../fonts/Sigmar_One/SigmarOne-Regular.ttf);
+}
 body {
   background-color: #000;
-  font-family: 'Rubik';
-  color: #fff;
+  font-family: "Charm";
+  color: #eee;
   margin: 0;
   background-image: url(../images/pattern1.png);
 }
-
 body::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: fixed;
@@ -30,10 +38,8 @@ body::after {
   top: 0;
   left: 0;
   z-index: 999999999;
-  -webkit-animation: body-animate 20s ease;
-          animation: body-animate 20s ease;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  animation: body-animate 2s ease;
+  animation-delay: 1.8s;
 }
 
 .container {
@@ -42,30 +48,25 @@ body::after {
 }
 
 .navigation {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 3fr;
   padding: 0.5rem 0;
 }
-
 .navigation div:first-child h3 {
-  font-family: 'Rubik Bold';
+  font-family: "Rubik Bold";
   opacity: 0.8;
   font-size: 1vw;
   margin: 0;
 }
-
 .navigation div:last-child {
   margin: auto 0 auto auto;
 }
-
 .navigation div:last-child a {
   display: inline-block;
   color: #fff;
   padding: 0 0.5rem;
   text-decoration: none;
-  font-family: 'Rubik Bold';
+  font-family: "Rubik Bold";
   opacity: 0.8;
   font-size: 1vw;
 }
@@ -74,21 +75,25 @@ section.banner {
   position: relative;
   overflow: hidden;
 }
-
 section.banner img.bg {
-  -webkit-animation: fade-in-down 1s ease;
-          animation: fade-in-down 1s ease;
+  animation: fade-in-down 1s ease;
   margin-top: -10%;
   position: relative;
   rotate: 180deg;
   width: 100%;
   z-index: 5;
 }
-
+section.banner img.bg-white {
+  animation: fade-in-down 1s ease;
+  animation-delay: 2s;
+  position: relative;
+  rotate: 0deg;
+  width: 100%;
+  z-index: 5;
+}
 section.banner img.profile {
   width: 100%;
-  -webkit-animation: profile-fade-in-down 0.4s ease;
-          animation: profile-fade-in-down 0.4s ease;
+  animation: profile-fade-in-down 0.4s ease;
   border-radius: 50%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -97,18 +102,14 @@ section.banner img.profile {
      object-position: top;
   position: relative;
   z-index: 99;
-  -webkit-box-shadow: 0 4px 10px 6px #000;
-          box-shadow: 0 4px 10px 6px #000;
+  box-shadow: 0 4px 10px 6px #000;
 }
-
 section.banner .text-content {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3f51b5), to(transparent)), url(../images/pattern1.png), #0000 url(../images/profile-bw.webp) repeat 50% 64%;
-  background: linear-gradient(180deg, #3f51b5, transparent), url(../images/pattern1.png), #0000 url(../images/profile-bw.webp) repeat 50% 64%;
+  background: linear-gradient(180deg, #b72797, transparent), url(../images/pattern1.png), rgba(0, 0, 0, 0) url(../images/profile-bw.webp) repeat 50% 64%;
 }
-
 section.banner .text-content h1 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.3vw;
@@ -116,333 +117,161 @@ section.banner .text-content h1 {
   font-size: 6.8vw;
   font-style: italic;
   line-height: 0;
-  font-family: 'Rubik Bold';
+  font-family: "Nosifer";
   white-space: nowrap;
 }
-
 section.banner .text-content h1:first-child {
   margin-top: 2vw;
-  -webkit-animation: fade-in-down 2.5s ease;
-          animation: fade-in-down 2.5s ease;
+  animation: fade-in-down 2.5s ease;
 }
-
 section.banner .text-content h1:nth-child(2) {
-  -webkit-animation: fade-in-down 1.5s ease;
-          animation: fade-in-down 1.5s ease;
+  animation: fade-in-down 1.5s ease;
   margin-left: 5vw;
 }
-
 section.banner .text-content h1:last-child {
   white-space: nowrap;
-  -webkit-animation: fade-in-down 0.5s ease;
-          animation: fade-in-down 0.5s ease;
+  animation: fade-in-down 0.5s ease;
 }
-
 section.banner .bottom {
   z-index: 9999999999;
   position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
 }
-
 section.banner .bottom div {
   padding: 1rem;
   position: relative;
 }
-
 section.banner .bottom div#first {
-  -webkit-animation: bottom-animate-first 2s forwards;
-          animation: bottom-animate-first 2s forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  animation: bottom-animate-first 2s forwards;
+  animation-delay: 1.8s;
   opacity: 0;
+  padding-top: 0;
+  text-align: center;
 }
-
 section.banner .bottom div#first h4 {
-  font-size: 2vw;
-  font-family: 'Rubik Bold';
-  color: #3f51b5;
+  font-size: 50px;
+  font-family: "Nosifer";
+  color: #b72797;
   margin: 0;
+  text-shadow: 0 1px 0 WHITE;
 }
-
-section.banner .bottom div#second {
-  -webkit-animation: bottom-animate-second 5s forwards;
-          animation: bottom-animate-second 5s forwards;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
-  opacity: 0;
-}
-
-section.banner .bottom div#second ul {
-  list-style: none;
-  position: relative;
-  padding-left: 1rem;
-}
-
-section.banner .bottom div#second ul li {
-  font-size: 3vw;
-  font-family: 'Rubik Bold';
-  text-align: right;
-  position: relative;
-  overflow: hidden;
-  -webkit-transform: rotate3d(1, 3, 1, 0deg);
-          transform: rotate3d(1, 3, 1, 0deg);
-  -webkit-animation: li-animate 5s ease;
-          animation: li-animate 5s ease;
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#fefefe), to(#3e50b4));
-  background-image: linear-gradient(360deg, #fefefe, #3e50b4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 section.banner .bottom div h1 {
-  font-family: 'Rubik Bold';
-  font-size: 3vw;
+  font-family: "Nosifer";
+  font-size: 80px;
   margin: 0;
-  text-shadow: -4px 0px black;
+  color: #b72797;
+  text-shadow: 0px 1px 0px #fff;
 }
-
 section.banner .bottom div p {
-  font-size: 1.2vw;
+  font-size: 30px;
+  width: 900px;
+  margin: auto;
+  text-align: justify;
+  font-family: "Nosifer";
+  color: #b72797;
+  text-shadow: 0 1px 0px #fff;
+}
+section.banner .bottom div a {
+  display: block;
+  position: relative;
+  font-size: 20px;
+  font-family: "Rubik Bold ";
+  color: #fff;
+  padding: 1rem 3rem;
+  border: 1px solid #fff;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 4rem;
 }
 
-@-webkit-keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+.second-wrapper {
+  background: linear-gradient(180deg, #3f51b5, transparent), url(../images/pattern1.png), rgba(0, 0, 0, 0) url(../images/profile-bw.webp) repeat 50% 50%;
 }
 
 @keyframes fade-in-down {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-
-@-webkit-keyframes profile-fade-in-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 @keyframes profile-fade-in-down {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-
-@-webkit-keyframes to-left {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
 @keyframes to-left {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    transform: translateX(50px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
-@-webkit-keyframes to-right {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
 @keyframes to-right {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    transform: translateX(-50px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
-@-webkit-keyframes bottom-animate-first {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  90% {
-    -webkit-transform: translateX(0%) scale(1);
-            transform: translateX(0%) scale(1);
-  }
-  95% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0%) scale(1);
-            transform: translateX(0%) scale(1);
-  }
-}
-
 @keyframes bottom-animate-first {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateY(50%);
   }
   90% {
-    -webkit-transform: translateX(0%) scale(1);
-            transform: translateX(0%) scale(1);
+    transform: translateY(0%) scale(1);
   }
   95% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    transform: scale(0.8);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0%) scale(1);
-            transform: translateX(0%) scale(1);
+    transform: translateX(0%) scale(1);
   }
 }
-
-@-webkit-keyframes li-animate {
-  0% {
-    -webkit-transform: rotate3d(1, 3, 1, 95deg);
-            transform: rotate3d(1, 3, 1, 95deg);
-  }
-  100% {
-    -webkit-transform: rotate3d(1, 3, 1, 0deg);
-            transform: rotate3d(1, 3, 1, 0deg);
-  }
-}
-
 @keyframes li-animate {
   0% {
-    -webkit-transform: rotate3d(1, 3, 1, 95deg);
-            transform: rotate3d(1, 3, 1, 95deg);
+    transform: rotate3d(1, 3, 1, 95deg);
   }
   100% {
-    -webkit-transform: rotate3d(1, 3, 1, 0deg);
-            transform: rotate3d(1, 3, 1, 0deg);
+    transform: rotate3d(1, 3, 1, 0deg);
   }
 }
-
-@-webkit-keyframes bottom-animate-second {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(50%) scale(0.1);
-            transform: translateX(50%) scale(0.1);
-  }
-  50% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  90% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  95% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0%) scale(1);
-            transform: translateX(0%) scale(1);
-  }
-}
-
 @keyframes bottom-animate-second {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(50%) scale(0.1);
-            transform: translateX(50%) scale(0.1);
+    transform: translateX(50%) scale(0.1);
   }
   50% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   90% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   95% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    transform: scale(0.8);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0%) scale(1);
-            transform: translateX(0%) scale(1);
+    transform: translateX(0%) scale(1);
   }
 }
-
-@-webkit-keyframes body-animate {
-  0% {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  3% {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-
 @keyframes body-animate {
   0% {
     background-color: rgba(0, 0, 0, 0);
@@ -457,27 +286,25 @@ section.banner .bottom div p {
     background-color: rgba(0, 0, 0, 0);
   }
 }
-
+@media screen and (max-width: 1120px) {
+  section.banner .bottom div#first h4 {
+    font-size: 35px;
+  }
+  section.banner .bottom div h1 {
+    font-size: 50px;
+  }
+  section.banner .bottom div p {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 900px) {
   section.banner .text-content h1 {
     font-size: 13vw;
   }
   section.banner .bottom {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-  section.banner .bottom div#first h4, section.banner .bottom div#first p {
-    font-size: 4vw;
+  section.banner .bottom div p {
+    width: 90%;
   }
-  section.banner .bottom div#second ul {
-    padding-left: 1rem;
-  }
-  section.banner .bottom div#second ul li {
-    font-size: 6vw;
-    text-align: left;
-  }
-  section.banner .bottom div h1 {
-    font-size: 6vw;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
