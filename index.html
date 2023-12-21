@@ -1,70 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CPGC PROFILE</title>
-    <link rel="shortcut icon" href="images/icon.png" />
-    <link rel="icon" href="images/icon.png" type="image/png" sizes="16x16" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <script type="module" crossorigin src="./assets/index-NpT6oLHc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-MV4wDPTY.css">
   </head>
   <body>
-    <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
-    <section class="banner">
-      <div class="text-content">
-        <h1>WORDPRESS DEVELOPER</h1>
-        <h1>WEB DEVELOPER - LARAVEL DEVELOPER</h1>
-        <h1>LARAVEL DEVELOPER LARAVEL</h1>
-      </div>
-      <img src="images/scratch.webp" alt="sd" class="bg" />
-      <div class="bottom">
-        <div id="first">
-          <div>
-            <h4>Web Developer</h4>
-            <h1>CHRISTIAN PAUL CAMENTO</h1>
-            <p>
-              Im a web developer with experience in web development and
-              currently working in real estate industry since 2019 up to now. I
-              am a hard working, honest individual and always willing to learn
-              new skills.
-            </p>
-            <a href="images/paul-cv.pdf" target="__blank">CSV DOWNLOAD</a>
-          </div>
-        </div>
-      </div>
-      <div class="second-wrapper">
-        <img src="images/scratch.webp" alt="sd" class="bg-white" />
-      </div>
-    </section>
-
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "107199731784198");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v18.0",
-        });
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
+    <div id="app"></div>
   </body>
 </html>
